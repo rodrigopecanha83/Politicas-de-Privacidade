@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade — ScreenShot Turbo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        h1, h2, h3 {
+            color: #111;
+        }
+        h1 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        strong {
+            color: #000;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: #f8fafc;
+            border-left: 4px solid #0284c7;
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        a {
+            color: #0284c7;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Política de Privacidade da Extensão:<br>"ScreenShot Turbo"</h1>
+
+    <p><strong>Última atualização:</strong> 19 de outubro de 2026</p>
+
+    <p>
+        A sua privacidade é uma prioridade fundamental para nós. Esta Política de Privacidade descreve de forma transparente como a extensão <strong>ScreenShot Turbo</strong> para Google Chrome e navegadores baseados no Chromium trata as informações durante a sua utilização.
+    </p>
+
+    <div class="highlight-box">
+        <strong>Resumo de Privacidade:</strong> A extensão <strong>não</strong> coleta, não armazena em servidores remotos, não rastreia, não compartilha e não vende nenhum dado pessoal, histórico de navegação ou imagem capturada pelo usuário. Todo o processamento é 100% local no seu próprio computador.
+    </div>
+
+    <h2>1. Processamento e Coleta de Dados</h2>
+    <p>
+        O <strong>ScreenShot Turbo</strong> opera sob o princípio de processamento estritamente local:
+    </p>
+    <ul>
+        <li><strong>Imagens e Capturas de Tela:</strong> Todas as capturas de tela (janela visível, seleção de área e página inteira), edições, recortes, desenhos e anotações são renderizados e processados exclusivamente na memória do navegador do usuário através das APIs padrão de Canvas e Chrome Extension. Nenhuma imagem é transmitida para servidores externos.</li>
+        <li><strong>Sem Coleta de Dados Pessoais:</strong> Não coletamos nomes, e-mails, endereços IP, identificadores únicos de dispositivo ou informações sensíveis.</li>
+        <li><strong>Sem Rastreamento ou Analytics:</strong> A extensão não inclui ferramentas de análise de terceiros (como Google Analytics), scripts de telemetria, rastreadores ou cookies de publicidade.</li>
+    </ul>
+
+    <h2>2. Permissões Solicitadas e Suas Justificativas</h2>
+    <p>
+        A extensão solicita apenas as permissões essenciais e justificadas para o seu único propósito funcional (capturar e editar telas):
+    </p>
+    <ul>
+        <li><code>activeTab</code>: Concede acesso temporário à aba atualmente aberta apenas no momento exato em que o usuário dispara uma ação de captura, permitindo registrar a área visível e exibir a sobreposição de seleção.</li>
+        <li><code>tabs</code>: Utilizada para abrir a página do editor de imagens (<code>editor/editor.html</code>) em uma nova aba após a captura e para obter o título/domínio da página com a única finalidade de sugerir nomes organizados de arquivo (ex.: <code>captura_dominio_data.png</code>).</li>
+        <li><code>scripting</code>: Permite injetar a camada visual interativa de recorte na aba ativa, possibilitando que o usuário desenhe retângulos de seleção com o mouse e coordenando a rolagem vertical no modo de página inteira.</li>
+        <li><code>storage</code> e <code>unlimitedStorage</code>: Utilizadas estritamente no armazenamento local (<code>chrome.storage.local</code>) para memorizar as preferências do usuário (como formato de exportação favorito, níveis de qualidade e atalhos) e para reter temporariamente os dados brutos da imagem em alta resolução até que ela seja carregada no editor.</li>
+        <li><code>downloads</code>: Utilizada unicamente quando o usuário clica no botão "Salvar Imagem", permitindo salvar o arquivo gerado (PNG, JPG ou WebP) na pasta de Downloads do seu computador.</li>
+        <li>Permissão de host (<code>&lt;all_urls&gt;</code>): Necessária para permitir que o usuário realize capturas de tela em qualquer website em que desejar acionar a extensão.</li>
+    </ul>
+
+    <h2>3. Código Remoto e Terceiros</h2>
+    <p>
+        Em estrita conformidade com as Políticas de Desenvolvedor da Chrome Web Store e do Manifest V3:
+    </p>
+    <ul>
+        <li>A extensão <strong>não carrega nenhum código remoto</strong> (scripts externos, CDN externa ou WebAssembly não empacotado).</li>
+        <li>Todas as bibliotecas e recursos necessários (como Fabric.js) estão incluídos localmente no pacote da extensão.</li>
+        <li>Não há compartilhamento, comercialização ou integração de dados com empresas parceiras ou serviços de publicidade.</li>
+    </ul>
+
+    <h2>4. Armazenamento e Exclusão</h2>
+    <p>
+        As preferências e imagens temporárias são armazenadas exclusivamente no perfil local do navegador do usuário. Ao desinstalar a extensão do Chrome ou ao limpar os dados do navegador, todas as preferências e dados locais são apagados de forma definitiva e imediata.
+    </p>
+
+    <h2>5. Alterações nesta Política de Privacidade</h2>
+    <p>
+        Esta política pode ser atualizada caso novos recursos técnicos sejam adicionados à extensão. Quaisquer atualizações serão devidamente documentadas neste repositório com a data de revisão atualizada.
+    </p>
+
+    <h2>6. Contato</h2>
+    <p>
+        Se você tiver qualquer dúvida ou sugestão sobre esta Política de Privacidade ou sobre as práticas do ScreenShot Turbo, entre em contato através do GitHub:
+    </p>
+    <p>
+        <a href="https://github.com/rodrigopecanha83" target="_blank" rel="noopener noreferrer">https://github.com/rodrigopecanha83</a>
+    </p>
+
+    <footer>
+        <p>&copy; 2026 ScreenShot Turbo — Desenvolvido por Rodrigo Peçanha.</p>
+    </footer>
+
+</body>
+</html>
